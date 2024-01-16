@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Popup</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="OpenContainer">
+      <button id="OpenButton">Open</button>
+    </div>
+    <div id="DeezerContainer">
+      <div id="title">DeezerPlus</div>
+      <div id="songInfo">
+        <div id="songTitle"></div>
+        <div id="songArtist"></div>
+      </div>
+      <div id="controlbuttons">
+        <button id="PrevButton">
+          <img src="./assets/prev_button.svg" alt="PrevButton" />
+        </button>
+        <button id="PlayButton">
+          <img src="./assets/play_button.svg" alt="PlayButton" />
+        </button>
+        <button id="NextButton">
+          <img src="./assets/next_button.svg" alt="NextButton" />
+        </button>
+        <div class="volume-container">
+          <label for="volumeSlider">Volume</label>
+          <input type="range" id="volumeSlider" min="0" max="100" value="50" />
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

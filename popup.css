@@ -1,0 +1,5 @@
+#DeezerContainer {
+  display: none;
+  flex-direction: column;
+  width: 200px;
+}

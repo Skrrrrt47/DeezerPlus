@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "DeezerPlus",
+  "version": "1.1",
+  "description": "Enhance your deezer experience on navigator!",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "host_permissions": ["https://*/"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+Y"
+      }
+    },
+    "play_and_pause_music": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Z",
+        "mac": "Command+Shift+Z"
+      },
+      "description": "Play or Pause the current music"
+    },
+    "next_music": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Switch to the next music"
+    },
+    "previous_music": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "Command+Shift+Q"
+      },
+      "description": "Switch to the previous music"
+    }
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://deezer.com/*"],
+      "js": ["popup.js"]
+    }
+  ]
+}
